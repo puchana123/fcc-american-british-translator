@@ -13,7 +13,7 @@ suite('Unit Tests', () => {
             const locale = 'american-to-british'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, 'Mangoes are my <span style="color:green">favourite</span> fruit.');
+            assert.equal(output, 'Mangoes are my <span class="highlight">favourite</span> fruit.');
         });
         // #2
         test('No.2', () => {
@@ -21,7 +21,7 @@ suite('Unit Tests', () => {
             const locale = 'american-to-british'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, 'I ate <span style="color:green">yoghurt</span> for breakfast.');
+            assert.equal(output, 'I ate <span class="highlight">yoghurt</span> for breakfast.');
         });
         // #3
         test('No.3', () => {
@@ -29,7 +29,7 @@ suite('Unit Tests', () => {
             const locale = 'american-to-british'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, `We had a party at my friend's <span style="color:green">flat</span>.`);
+            assert.equal(output, `We had a party at my friend's <span class="highlight">flat</span>.`);
         });
         // #4
         test('No.4', () => {
@@ -37,7 +37,7 @@ suite('Unit Tests', () => {
             const locale = 'american-to-british'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, `Can you toss this in the <span style="color:green">bin</span> for me?`);
+            assert.equal(output, `Can you toss this in the <span class="highlight">bin</span> for me?`);
         });
         // #5
         test('No.5', () => {
@@ -45,7 +45,7 @@ suite('Unit Tests', () => {
             const locale = 'american-to-british'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, `The <span style="color:green">car park</span> was full.`);
+            assert.equal(output, `The <span class="highlight">car park</span> was full.`);
         });
         // #6
         test('No.6', () => {
@@ -53,7 +53,7 @@ suite('Unit Tests', () => {
             const locale = 'american-to-british'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, `Like a high tech <span style="color:green">Heath Robinson device</span>.`);
+            assert.equal(output, `Like a high tech <span class="highlight">Heath Robinson device</span>.`);
         });
         // #7
         test('No.7', () => {
@@ -61,7 +61,7 @@ suite('Unit Tests', () => {
             const locale = 'american-to-british'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, `To <span style="color:green">bunk off</span> means to skip class or work.`);
+            assert.equal(output, `To <span class="highlight">bunk off</span> means to skip class or work.`);
         });
         // #8
         test('No.8', () => {
@@ -69,7 +69,7 @@ suite('Unit Tests', () => {
             const locale = 'american-to-british'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, `No <span style="color:green">Mr</span> Bond, I expect you to die.`);
+            assert.equal(output, `No <span class="highlight">Mr</span> Bond, I expect you to die.`);
         });
         // #9
         test('No.9', () => {
@@ -77,7 +77,7 @@ suite('Unit Tests', () => {
             const locale = 'american-to-british'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, `<span style="color:green">Dr</span> Grosh will see you now.`);
+            assert.equal(output, `<span class="highlight">Dr</span> Grosh will see you now.`);
         });
         // #10
         test('No.10', () => {
@@ -85,7 +85,7 @@ suite('Unit Tests', () => {
             const locale = 'american-to-british'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, `Lunch is at <span style="color:green">12.15</span> today.`);
+            assert.equal(output, `Lunch is at <span class="highlight">12.15</span> today.`);
         });
     });
 
@@ -96,7 +96,7 @@ suite('Unit Tests', () => {
             const locale = 'british-to-american'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, `We watched the <span style="color:green">soccer</span> match for a while.`);
+            assert.equal(output, `We watched the <span class="highlight">soccer</span> match for a while.`);
         });
         // #12
         test('No.12', () => {
@@ -104,7 +104,7 @@ suite('Unit Tests', () => {
             const locale = 'british-to-american'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, `<span style="color:green">Tylenol</span> takes up to an hour to work.`);
+            assert.equal(output, `<span class="highlight">Tylenol</span> takes up to an hour to work.`);
         });
         // #13
         test('No.13', () => {
@@ -112,7 +112,7 @@ suite('Unit Tests', () => {
             const locale = 'british-to-american'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, `First, <span style="color:green">caramelize</span> the onions.`);
+            assert.equal(output, `First, <span class="highlight">caramelize</span> the onions.`);
         });
         // #14
         test('No.14', () => {
@@ -120,7 +120,7 @@ suite('Unit Tests', () => {
             const locale = 'british-to-american'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, `I spent the <span style="color:green">public holiday</span> at the <span style="color:green">carnival</span>.`);
+            assert.equal(output, `I spent the <span class="highlight">public holiday</span> at the <span class="highlight">carnival</span>.`);
         });
         // #15
         test('No.15', () => {
@@ -128,7 +128,7 @@ suite('Unit Tests', () => {
             const locale = 'british-to-american'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, `I had a <span style="color:green">cookie</span> then went to the <span style="color:green">fish-and-chip shop</span>.`);
+            assert.equal(output, `I had a <span class="highlight">cookie</span> then went to the <span class="highlight">fish-and-chip shop</span>.`);
         });
         // #16
         test('No.16', () => {
@@ -136,7 +136,7 @@ suite('Unit Tests', () => {
             const locale = 'british-to-american'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, `I've just got <span style="color:green">odds and ends</span> in my <span style="color:green">fanny pack</span>.`);
+            assert.equal(output, `I've just got <span class="highlight">odds and ends</span> in my <span class="highlight">fanny pack</span>.`);
         });
         // #17
         test('No.17', () => {
@@ -144,7 +144,7 @@ suite('Unit Tests', () => {
             const locale = 'british-to-american'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, `The <span style="color:green">swap meet</span> at Boxted Airfield was called off.`);
+            assert.equal(output, `The <span class="highlight">swap meet</span> at Boxted Airfield was called off.`);
         });
         // #18
         test('No.18', () => {
@@ -152,7 +152,7 @@ suite('Unit Tests', () => {
             const locale = 'british-to-american'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, `Have you met <span style="color:green">Mrs.</span> Kalyani?`);
+            assert.equal(output, `Have you met <span class="highlight">Mrs.</span> Kalyani?`);
         });
         // #19
         test('No.19', () => {
@@ -160,7 +160,7 @@ suite('Unit Tests', () => {
             const locale = 'british-to-american'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, `<span style="color:green">Prof.</span> Joyner of King's College, London.`);
+            assert.equal(output, `<span class="highlight">Prof.</span> Joyner of King's College, London.`);
         });
         // #20
         test('No.20', () => {
@@ -168,7 +168,7 @@ suite('Unit Tests', () => {
             const locale = 'british-to-american'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, `Tea time is usually around 4 or <span style="color:green">4:30</span>.`);
+            assert.equal(output, `Tea time is usually around 4 or <span class="highlight">4:30</span>.`);
         });
     });
 
@@ -179,7 +179,7 @@ suite('Unit Tests', () => {
             const locale = 'american-to-british'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, 'Mangoes are my <span style="color:green">favourite</span> fruit.');
+            assert.equal(output, 'Mangoes are my <span class="highlight">favourite</span> fruit.');
         });
         // #22
         test('No.22', () => {
@@ -187,7 +187,7 @@ suite('Unit Tests', () => {
             const locale = 'american-to-british'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, 'I ate <span style="color:green">yoghurt</span> for breakfast.');
+            assert.equal(output, 'I ate <span class="highlight">yoghurt</span> for breakfast.');
         });
         // #23
         test('No.23', () => {
@@ -195,7 +195,7 @@ suite('Unit Tests', () => {
             const locale = 'british-to-american'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, `We watched the <span style="color:green">soccer</span> match for a while.`);
+            assert.equal(output, `We watched the <span class="highlight">soccer</span> match for a while.`);
         });
         // #24
         test('No.24', () => {
@@ -203,7 +203,7 @@ suite('Unit Tests', () => {
             const locale = 'british-to-american'
             const output = translate.Translator(text, locale);
             assert.isString(output, 'result is String');
-            assert.equal(output, `<span style="color:green">Tylenol</span> takes up to an hour to work.`);
+            assert.equal(output, `<span class="highlight">Tylenol</span> takes up to an hour to work.`);
         });
     });
 });

@@ -49,13 +49,13 @@ class Translator {
             // group all word british to american
             dictionary = { ...britishToAmericanSpelling, ...britishOnly };
         } else {
-            return {"error": `support 'american-to-british' or 'british-to-american' locale only`};
+            return { "error": `Invalid value for locale field` };
         }
         // create regex  pattern from keys using \\b (word boundary) to match whole words only
         // regex format => /\b(word1|word 2|....)\b/gi
         const pattern = new RegExp(`\\b(${Object.keys(dictionary).join('|')})\\b`, 'gi');
         // result change color to green with match pattern
-        const result = text.replace(pattern, match => `<span style="color:green">${dictionary[match.toLowerCase()] || match}</span>`
+        const result = text.replace(pattern, match => `<span class="highlight">${dictionary[match.toLowerCase()] || match}</span>`
         );
 
         return result
@@ -81,10 +81,10 @@ class Translator {
             // regex format => /\b(mr|mrs|....)\b/gi
             pattern = new RegExp(`\\b(${Object.keys(dictionary).join('|')})\\b`, 'gi');
         } else {
-            return {"error": `support 'american-to-british' or 'british-to-american' locale only`};
+            return { "error": `Invalid value for locale field` };
         }
         // result change color to green with match pattern
-        const result = text.replace(pattern, match => `<span style="color:green">${dictionary[match.toLowerCase()] || match}</span>`
+        const result = text.replace(pattern, match => `<span class="highlight">${dictionary[match.toLowerCase()] || match}</span>`
         );
 
         return result
@@ -98,17 +98,17 @@ class Translator {
             pattern = /(\d{1,2}):(\d{2})/;
             result = text.replace(pattern, (mathc, hour, minute) => {
                 // result change color to green with whole time format
-                return `<span style="color:green">${hour + '.' + minute}</span>`
+                return `<span class="highlight">${hour + '.' + minute}</span>`
             });
         } else if (locale === 'british-to-american') {
             // change . to :
             pattern = /(\d{1,2})\.(\d{2})/;
             result = text.replace(pattern, (mathc, hour, minute) => {
                 // result change color to green with whole time format
-                return `<span style="color:green">${hour + ':' + minute}</span>`
+                return `<span class="highlight">${hour + ':' + minute}</span>`
             });
         } else {
-            return {"error": `support 'american-to-british' or 'british-to-american' locale only`};
+            return { "error": `Invalid value for locale field` };
         }
         return result
     }

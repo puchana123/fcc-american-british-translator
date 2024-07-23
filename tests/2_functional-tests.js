@@ -21,7 +21,7 @@ suite('Functional Tests', () => {
             })
             .end((err, res) => {
                 assert.equal(res.status, 200, 'Api response');
-                assert.equal(res.body.translation, 'Mangoes are my <span style="color:green">favourite</span> fruit.', 'translated correctly');
+                assert.equal(res.body.translation, 'Mangoes are my <span class="highlight">favourite</span> fruit.', 'translated correctly');
                 done();
             })
     });
@@ -37,7 +37,7 @@ suite('Functional Tests', () => {
             })
             .end((err, res) => {
                 assert.equal(res.status, 200, 'Api response');
-                assert.equal(res.body.error, "support 'american-to-british' or 'british-to-american' locale only", 'error message');
+                assert.equal(res.body.error, "Invalid value for locale field", 'error message');
                 done();
             })
     });
@@ -52,7 +52,7 @@ suite('Functional Tests', () => {
             })
             .end((err, res) => {
                 assert.equal(res.status, 200, 'Api response');
-                assert.equal(res.body.error, "No text to translate", 'error message');
+                assert.equal(res.body.error, "Required field(s) missing", 'error message');
                 done();
             })
     });
@@ -67,7 +67,7 @@ suite('Functional Tests', () => {
             })
             .end((err, res) => {
                 assert.equal(res.status, 200, 'Api response');
-                assert.equal(res.body.error, "No locale field", 'error message');
+                assert.equal(res.body.error, "Required field(s) missing", 'error message');
                 done();
             })
     });

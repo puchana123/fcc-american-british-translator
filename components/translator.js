@@ -49,7 +49,7 @@ class Translator {
             // group all word british to american
             dictionary = { ...britishToAmericanSpelling, ...britishOnly };
         } else {
-            throw new Error("Unsupported locale: " + locale);
+            return {"error": `support 'american-to-british' or 'british-to-american' locale only`};
         }
         // create regex  pattern from keys using \\b (word boundary) to match whole words only
         // regex format => /\b(word1|word 2|....)\b/gi
@@ -81,7 +81,7 @@ class Translator {
             // regex format => /\b(mr|mrs|....)\b/gi
             pattern = new RegExp(`\\b(${Object.keys(dictionary).join('|')})\\b`, 'gi');
         } else {
-            throw new Error("Unsupported locale: " + locale);
+            return {"error": `support 'american-to-british' or 'british-to-american' locale only`};
         }
         // result change color to green with match pattern
         const result = text.replace(pattern, match => `<span style="color:green">${dictionary[match.toLowerCase()] || match}</span>`
@@ -108,7 +108,7 @@ class Translator {
                 return `<span style="color:green">${hour + ':' + minute}</span>`
             });
         } else {
-            throw new Error("Unsupported locale: " + locale);
+            return {"error": `support 'american-to-british' or 'british-to-american' locale only`};
         }
         return result
     }
